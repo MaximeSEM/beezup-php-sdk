@@ -1,0 +1,40 @@
+{
+  "name": "maximesem/beezup-php_sdk",
+  "description": "A none official PHP SDK to wrap the BeezUP API. This enables you to develop a fast, flexible and custom integration for your existing e-commerce solution.",
+  "keywords": [
+    "sdk",
+    "beezup",
+    "api"
+  ],
+  "type": "library",
+  "version": "dev-1.0",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Maxime DANJOU",
+      "email": "maximg@semboutique.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BeezupSDK\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BeezupSDK\\Test\\": "test/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "~7.0",
+    "guzzlehttp/psr7": "~2.0",
+    "psr/log": "~3.0",
+    "ext-mbstring": "*",
+    "ext-simplexml": "*",
+    "ext-libxml": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~9.5.0"
+  }
+}
