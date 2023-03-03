@@ -15,6 +15,9 @@ use BeezupSDK\Domain\Customer\Account\Account;
 use BeezupSDK\Domain\Customer\Account\CreditCardInfo;
 use BeezupSDK\Domain\Customer\Account\ProfilePicture;
 use BeezupSDK\Domain\Customer\Alerts\Collection\AlertCollection;
+use BeezupSDK\Domain\Customer\Contracts\Collection\BillingPeriodCollection;
+use BeezupSDK\Domain\Customer\Contracts\Collection\OfferCollection;
+use BeezupSDK\Domain\Customer\Contracts\OfferPricing;
 use BeezupSDK\Domain\Customer\Friends\Collection\FriendCollection;
 use BeezupSDK\Domain\Customer\Invoices\Collection\InvoiceCollection;
 use BeezupSDK\Domain\Customer\Rights\Collection\RightCollection;
@@ -55,6 +58,13 @@ use BeezupSDK\Request\Customer\Account\PutPersonalInformationRequest;
 use BeezupSDK\Request\Customer\Account\PutProfilePictureRequest;
 use BeezupSDK\Request\Customer\Alerts\GetAlertsRequest;
 use BeezupSDK\Request\Customer\Alerts\PostAlertsRequest;
+use BeezupSDK\Request\Customer\Contracts\DeleteContractRequest;
+use BeezupSDK\Request\Customer\Contracts\GetContractBillingPeriodsRequest;
+use BeezupSDK\Request\Customer\Contracts\GetContractOffersRequest;
+use BeezupSDK\Request\Customer\Contracts\PostContractDisableAutoRenewalRequest;
+use BeezupSDK\Request\Customer\Contracts\PostContractEnableAutoRenewalRequest;
+use BeezupSDK\Request\Customer\Contracts\PostContractOffersRequest;
+use BeezupSDK\Request\Customer\Contracts\PostContractRequest;
 use BeezupSDK\Request\Customer\Friends\GetFriendsRequest;
 use BeezupSDK\Request\Customer\Invoices\GetInvoicesRequest;
 use BeezupSDK\Request\Customer\Rights\GetRightsRequest;
@@ -147,6 +157,13 @@ use GuzzleHttp\Psr7\Response;
  * @method RightCollection|Response getRights(GetRightsRequest $request)
  * @method FriendCollection|Response getFriends(GetFriendsRequest $request)
  * @method InvoiceCollection|Response getInvoices(GetInvoicesRequest $request)
+ * @method BillingPeriodCollection|Response getContractBillingPeriods(GetContractBillingPeriodsRequest $request)
+ * @method OfferCollection|Response getContractOffers(GetContractOffersRequest $request)
+ * @method OfferPricing|Response postContractOffers(PostContractOffersRequest $request)
+ * @method EmptyAnswer|Response postContract(PostContractRequest $request)
+ * @method EmptyAnswer|Response postContractDisableAutoRenewal(PostContractDisableAutoRenewalRequest $request)
+ * @method EmptyAnswer|Response postContractEnableAutoRenewal(PostContractEnableAutoRenewalRequest $request)
+ * @method EmptyAnswer|Response deleteContract(DeleteContractRequest $request)
  **/
 class Client extends AbstractApiClient
 {

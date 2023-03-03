@@ -3,9 +3,8 @@
 namespace BeezupSDK\Request\Customer\Friends;
 
 use BeezupSDK\Core\Request\AbstractRequest;
-use BeezupSDK\Core\Response\Decorator\BaseCollection;
-use BeezupSDK\Domain\Customer\Friends\Collection\FriendCollection;
-use BeezupSDK\Domain\Customer\Rights\Collection\RightCollection;
+use BeezupSDK\Core\Response\Decorator\BaseObject;
+use BeezupSDK\Domain\Customer\Friends\Friend;
 
 /**
  * @method string getUserId()
@@ -22,8 +21,8 @@ class GetFriendsRequest extends AbstractRequest
         $this->setUserId($userId);
     }
 
-    public function getResponseDecorator(): BaseCollection|RightCollection
+    public function getResponseDecorator(): BaseObject|Friend
     {
-        return FriendCollection::decorator(null, 'userId');
+        return Friend::decorator();
     }
 }
