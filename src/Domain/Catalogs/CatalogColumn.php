@@ -4,7 +4,7 @@ namespace BeezupSDK\Domain\Catalogs;
 
 use BeezupSDK\Core\Domain\BaseObject;
 use BeezupSDK\Domain\Catalogs\Common\DuplicateProductValueConfiguration;
-use BeezupSDK\Domain\Common\Configuration;
+use BeezupSDK\Domain\Common\FieldConfiguration;
 
 /**
  * @method  boolean  isIgnored()
@@ -12,12 +12,12 @@ use BeezupSDK\Domain\Common\Configuration;
  * @method  string  getId()
  * @method  string  getCatalogColumnName()
  * @method  string  getUserColumName()
- * @method  Configuration  getConfiguration()
+ * @method  FieldConfiguration  getConfiguration()
  */
 class CatalogColumn extends BaseObject
 {
     protected static array $dataTypes = [
         'duplicateProductValueConfiguration' => [DuplicateProductValueConfiguration::class, 'create'],
-        'configuration' => [Configuration::class, 'create'],
+        'configuration' => [FieldConfiguration::class, 'create'],
     ];
 }

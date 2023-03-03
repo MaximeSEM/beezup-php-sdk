@@ -10,10 +10,12 @@ use BeezupSDK\Core\Domain\BaseObject;
  * @method  string  getColumnDataType()
  * @method  string  getColumnCultureName()
  * @method  string  getColumnFormat()
- * @method  boolean  isCanBeTruncated()
+ * @method  boolean isCanBeTruncated()
+ * @method  boolean isUnique()
  * @method  string  isDisplayGroupName()
+ * @method  string  getDescription()
  */
-class Configuration extends BaseObject
+class FieldConfiguration extends BaseObject
 {
 
 }

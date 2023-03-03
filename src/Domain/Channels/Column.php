@@ -3,7 +3,7 @@
 namespace BeezupSDK\Domain\Channels;
 
 use BeezupSDK\Core\Domain\BaseObject;
-use BeezupSDK\Domain\Common\Configuration;
+use BeezupSDK\Domain\Common\FieldConfiguration;
 
 /**
  * @method  string  getChannelColumnId()
@@ -11,13 +11,13 @@ use BeezupSDK\Domain\Common\Configuration;
  * @method  string  getChannelColumnDescription()
  * @method  string  getShowInMapping()
  * @method  int  getPosition()
- * @method  Configuration  getConfiguration()
+ * @method  FieldConfiguration  getConfiguration()
  * @method  array  getRestrictedValues()
  */
 class Column extends BaseObject
 {
     protected static array $dataTypes = [
         'position' => 'intval',
-        'configuration' => [Configuration::class, 'create'],
+        'configuration' => [FieldConfiguration::class, 'create'],
     ];
 }

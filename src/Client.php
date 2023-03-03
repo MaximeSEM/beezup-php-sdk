@@ -3,6 +3,7 @@
 namespace BeezupSDK;
 
 use BeezupSDK\Core\Client\AbstractApiClient;
+use BeezupSDK\Domain\Catalogs\AutoImport;
 use BeezupSDK\Domain\Catalogs\Collection\CatalogColumnCollection;
 use BeezupSDK\Domain\Catalogs\Collection\CustomColumnCollection;
 use BeezupSDK\Domain\ChannelCatalogs\ChannelCatalog;
@@ -35,9 +36,17 @@ use BeezupSDK\Domain\PublicChannels\Collection\PublicChannelCollection;
 use BeezupSDK\Domain\Subscriptions\Collection\SubscriptionCollection;
 use BeezupSDK\Domain\Subscriptions\Collection\SubscriptionPushCollection;
 use BeezupSDK\Domain\Subscriptions\SubscriptionDetail;
+use BeezupSDK\Request\Catalogs\DeleteCatalogAutoImport;
+use BeezupSDK\Request\Catalogs\GetCatalogAutoImport;
 use BeezupSDK\Request\Catalogs\GetCatalogColumnsRequest;
 use BeezupSDK\Request\Catalogs\GetCustomColumnsRequest;
 use BeezupSDK\Request\Catalogs\GetProductBySkuRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportActivateRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportConfigureIntervalRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportConfigureSchedulesRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportPauseRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportResumeRequest;
+use BeezupSDK\Request\Catalogs\PostCatalogAutoImportStartRequest;
 use BeezupSDK\Request\ChannelCatalogs\DeleteChannelCatalogsProductOverrideRequest;
 use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogProductRequest;
 use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogRequest;
@@ -164,6 +173,13 @@ use GuzzleHttp\Psr7\Response;
  * @method EmptyAnswer|Response postContractDisableAutoRenewal(PostContractDisableAutoRenewalRequest $request)
  * @method EmptyAnswer|Response postContractEnableAutoRenewal(PostContractEnableAutoRenewalRequest $request)
  * @method EmptyAnswer|Response deleteContract(DeleteContractRequest $request)
+ * @method AutoImport|Response getCatalogAutoImport(GetCatalogAutoImport $request)
+ * @method EmptyAnswer|Response deleteCatalogAutoImport(DeleteCatalogAutoImport $request)
+ * @method EmptyAnswer|Response postCatalogAutoImportStart(PostCatalogAutoImportStartRequest $request)
+ * @method EmptyAnswer|Response postCatalogAutoImportPause(PostCatalogAutoImportPauseRequest $request)
+ * @method EmptyAnswer|Response postCatalogAutoImportResume(PostCatalogAutoImportResumeRequest $request)
+ * @method EmptyAnswer|Response postCatalogAutoImportConfigureInterval(PostCatalogAutoImportConfigureIntervalRequest $request)
+ * @method EmptyAnswer|Response postCatalogAutoImportConfigureSchedules(PostCatalogAutoImportConfigureSchedulesRequest $request)
  **/
 class Client extends AbstractApiClient
 {
