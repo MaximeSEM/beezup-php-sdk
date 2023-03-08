@@ -14,12 +14,12 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostCatalogAutoImportConfigureSchedulesRequest extends AbstractStoreRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/catalogs/{storeId}/autoImport/scheduling/schedules';
     public array $bodyParams = [
         'schedules',
         'localTimeZoneName'
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/catalogs/{storeId}/autoImport/scheduling/schedules';
 
     public function __construct(string $storeId, array $schedules, ?string $localTimeZoneName = null)
     {

@@ -12,11 +12,11 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostChangeUserEmailRequest extends AbstractRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/account/changeEmail';
     public array $bodyParams = [
         'newEmail'
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/account/changeEmail';
 
     public function __construct(string $newEmail)
     {

@@ -21,16 +21,15 @@ use BeezupSDK\Domain\Customer\Account\PersonalInfo;
  */
 class PutPersonalInformationRequest extends AbstractRequest
 {
+    public array $bodyParams = [
+        'lastName',
+        'firstName',
+        'phoneNumber',
+        'whatIDo',
+        'beezUPTimeZoneId'
+    ];
     protected string $method = 'PUT';
     protected string $endpoint = '/user/customer/account/personalInfo';
-
-    public array $bodyParams=[
-      'lastName',
-      'firstName',
-      'phoneNumber',
-      'whatIDo',
-      'beezUPTimeZoneId'
-    ];
 
     public function __construct(PersonalInfo $personalInfo)
     {

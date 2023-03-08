@@ -24,8 +24,9 @@ class PostStoreRequest extends AbstractRequest
 {
     use IdTrait;
 
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/stores';
+    protected static array $mapping = [
+        'storeId' => 'id'
+    ];
     public array $bodyParams = [
         'id',
         'name',
@@ -33,9 +34,8 @@ class PostStoreRequest extends AbstractRequest
         'countryIsoCodeAlpha3',
         'sectors'
     ];
-    protected static array $mapping = [
-        'storeId' => 'id'
-    ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/stores';
 
     public function __construct(Store $store)
     {

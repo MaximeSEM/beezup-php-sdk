@@ -1,4 +1,5 @@
 <?php
+
 namespace BeezupSDK\Domain\PublicChannels\Collection;
 
 use BeezupSDK\Core\Domain\Collection\BaseCollection;

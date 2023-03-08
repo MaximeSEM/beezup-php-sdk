@@ -353,7 +353,7 @@ abstract class AbstractApiClient implements ApiClientInterface
             }
             if ($request->isJSON()) {
                 $options['json'] = $data;
-            }elseif (!is_array($data)){
+            } elseif (!is_array($data)) {
                 $options['body'] = $data;
             }
         }

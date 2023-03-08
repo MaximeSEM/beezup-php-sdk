@@ -37,14 +37,14 @@ class PostSubscriptionsRequest extends AbstractRequest
     ];
 
     /**
-     * @param string $id    can be empty a random id will be generated
+     * @param string $id can be empty a random id will be generated
      * @param string $targetUrl
      * @param string $name
      * @param string $merchantApplicationName
      * @param string $merchantApplicationVersion
      * @param string|null $merchantEmailAlert
      */
-    public function __construct(string $id , string $targetUrl, string $name, string $merchantApplicationName, string $merchantApplicationVersion, ?string $merchantEmailAlert = null)
+    public function __construct(string $id, string $targetUrl, string $name, string $merchantApplicationName, string $merchantApplicationVersion, ?string $merchantEmailAlert = null)
     {
         parent::__construct();
         $this->setId($id);

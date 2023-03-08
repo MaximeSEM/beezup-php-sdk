@@ -24,7 +24,7 @@ class ContractDiscountInfo extends BaseObject
         'amountCodePromoDiscount' => 'floatval',
     ];
 
-    protected static array $mapping=[
-        'isCouponDiscountLinkedToCouponOffer'=>'couponDiscountLinkedToCouponOffer'
+    protected static array $mapping = [
+        'isCouponDiscountLinkedToCouponOffer' => 'couponDiscountLinkedToCouponOffer'
     ];
 }

@@ -91,7 +91,10 @@ use BeezupSDK\Request\Orders\GetOrderHistoryRequest;
 use BeezupSDK\Request\Orders\GetOrderRequest;
 use BeezupSDK\Request\Orders\GetOrdersFullRequestRequest;
 use BeezupSDK\Request\Orders\GetOrdersLightRequest;
+use BeezupSDK\Request\Orders\PostOrderChangeRequest;
+use BeezupSDK\Request\Orders\PostOrderHarvestRequest;
 use BeezupSDK\Request\Orders\PostOrderMerchantInformationRequest;
+use BeezupSDK\Request\Orders\DeleteOrderMerchantInformationRequest;
 use BeezupSDK\Request\PublicChannels\GetPublicChannels;
 use BeezupSDK\Request\PublicChannels\GetPublicChannelsByCountry;
 use BeezupSDK\Request\Security\PostLoginRequest;
@@ -128,6 +131,7 @@ use GuzzleHttp\Psr7\Response;
  * @method Order|Response getOrder(GetOrderRequest $request)
  * @method OrderHistory|Response getOrderHistory(GetOrderHistoryRequest $request)
  * @method EmptyAnswer|Response postOrderMerchantInformation(PostOrderMerchantInformationRequest $request)
+ * @method EmptyAnswer|Response deleteOrderMerchantInformation(DeleteOrderMerchantInformationRequest $request)
  * @method SubscriptionCollection|Response getSubscriptions(GetSubscriptionsRequest $request)
  * @method SubscriptionDetail|Response getSubscription(GetSubscriptionRequest $request)
  * @method SubscriptionPushCollection|Response getSubscriptionPush(GetSubscriptionsPushRequest $request)
@@ -180,6 +184,8 @@ use GuzzleHttp\Psr7\Response;
  * @method EmptyAnswer|Response postCatalogAutoImportResume(PostCatalogAutoImportResumeRequest $request)
  * @method EmptyAnswer|Response postCatalogAutoImportConfigureInterval(PostCatalogAutoImportConfigureIntervalRequest $request)
  * @method EmptyAnswer|Response postCatalogAutoImportConfigureSchedules(PostCatalogAutoImportConfigureSchedulesRequest $request)
+ * @method EmptyAnswer|Response postOrderChange(PostOrderChangeRequest $request)
+ * @method EmptyAnswer|Response postOrderHarvest(PostOrderHarvestRequest $request)
  **/
 class Client extends AbstractApiClient
 {

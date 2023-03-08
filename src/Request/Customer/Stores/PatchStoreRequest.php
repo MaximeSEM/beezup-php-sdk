@@ -20,13 +20,13 @@ class PatchStoreRequest extends AbstractRequest
 {
     use IdTrait;
 
-    protected string $method = 'PATCH';
-    protected string $endpoint = '/user/customer/stores/{id}';
     public array $bodyParams = [
         'name',
         'url',
         'sectors'
     ];
+    protected string $method = 'PATCH';
+    protected string $endpoint = '/user/customer/stores/{id}';
 
     public function __construct(Store $store)
     {

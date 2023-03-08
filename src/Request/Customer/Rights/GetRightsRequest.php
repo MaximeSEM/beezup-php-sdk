@@ -12,6 +12,6 @@ class GetRightsRequest extends AbstractStoreRequest
 
     public function getResponseDecorator(): BaseCollection|RightCollection
     {
-        return RightCollection::decorator(null,'functionalityCode');
+        return RightCollection::decorator(null, 'functionalityCode');
     }
 }

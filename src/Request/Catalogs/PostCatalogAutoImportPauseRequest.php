@@ -8,7 +8,7 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
 
 class PostCatalogAutoImportPauseRequest extends AbstractStoreRequest
 {
-    protected string $method ='POST';
+    protected string $method = 'POST';
     protected string $endpoint = '/user/catalogs/{storeId}/autoImport/pause';
 
     public function getResponseDecorator(): BaseObject|EmptyAnswer

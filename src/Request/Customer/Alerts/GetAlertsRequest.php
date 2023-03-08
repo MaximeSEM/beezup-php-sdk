@@ -15,6 +15,6 @@ class GetAlertsRequest extends AbstractStoreRequest
 
     public function getResponseDecorator(): BaseCollection|AlertCollection
     {
-        return AlertCollection::decorator('alerts','alertId');
+        return AlertCollection::decorator('alerts', 'alertId');
     }
 }

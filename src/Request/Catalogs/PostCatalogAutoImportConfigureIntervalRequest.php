@@ -12,13 +12,13 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostCatalogAutoImportConfigureIntervalRequest extends AbstractStoreRequest
 {
-    protected string $method ='POST';
-    protected string $endpoint = '/user/catalogs/{storeId}/autoImport/scheduling/interval';
-    public array $bodyParams=[
+    public array $bodyParams = [
         'interval'
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/catalogs/{storeId}/autoImport/scheduling/interval';
 
-    public function __construct(string $storeId,string $interval)
+    public function __construct(string $storeId, string $interval)
     {
         parent::__construct($storeId);
         $this->setInterval($interval);

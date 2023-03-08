@@ -1,4 +1,5 @@
 <?php
+
 namespace BeezupSDK\Domain\PublicChannels;
 
 use BeezupSDK\Core\Domain\BaseObject;

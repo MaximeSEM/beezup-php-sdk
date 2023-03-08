@@ -15,6 +15,7 @@ use Traversable;
 class BaseCollection implements ArrayableInterface, ArrayAccess, IteratorAggregate, Countable
 {
     use HeaderTrait;
+
     /**
      * Collection items
      *
@@ -73,7 +74,7 @@ class BaseCollection implements ArrayableInterface, ArrayAccess, IteratorAggrega
      * @return  Decorator\BaseCollection
      */
     #[Pure]
-    public static function decorator(?string $key = null,?string $idColumn = null): Decorator\BaseCollection
+    public static function decorator(?string $key = null, ?string $idColumn = null): Decorator\BaseCollection
     {
         return new Decorator\BaseCollection(static::class, $key, $idColumn);
     }

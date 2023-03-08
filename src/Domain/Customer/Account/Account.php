@@ -18,7 +18,7 @@ use BeezupSDK\Core\Domain\BaseObject;
 class Account extends BaseObject
 {
     protected static array $dataTypes = [
-        'personalInfo' => [PersonalInfo::class,'create'],
-        'companyInfo' => [CompanyInfo::class,'create'],
+        'personalInfo' => [PersonalInfo::class, 'create'],
+        'companyInfo' => [CompanyInfo::class, 'create'],
     ];
 }

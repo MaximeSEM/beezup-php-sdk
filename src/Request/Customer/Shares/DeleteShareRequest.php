@@ -12,13 +12,13 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  * */
 class DeleteShareRequest extends AbstractStoreRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/stores/{storeId}/shares/{userId}';
     public array $uriVars = [
         'userId'
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/stores/{storeId}/shares/{userId}';
 
-    public function __construct(string $storeId,string $userId)
+    public function __construct(string $storeId, string $userId)
     {
         parent::__construct($storeId);
         $this->setUserId($userId);

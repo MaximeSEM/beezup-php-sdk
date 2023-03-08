@@ -8,7 +8,7 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
 
 class PostCatalogAutoImportActivateRequest extends AbstractStoreRequest
 {
-    protected string $method ='POST';
+    protected string $method = 'POST';
     protected string $endpoint = '/user/catalogs/{storeId}/autoImport/activate';
 
     public function getResponseDecorator(): BaseObject|EmptyAnswer

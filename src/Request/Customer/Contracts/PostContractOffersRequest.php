@@ -20,9 +20,6 @@ use BeezupSDK\Domain\Customer\Contracts\OfferPricing;
  */
 class PostContractOffersRequest extends AbstractStoreRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/offers';
-
     public array $bodyParams = [
         'offerId',
         'storeCount',
@@ -30,6 +27,8 @@ class PostContractOffersRequest extends AbstractStoreRequest
         'couponOfferCode',
         'billingPeriodInMonth',
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/offers';
 
     /**
      * @param string $storeId

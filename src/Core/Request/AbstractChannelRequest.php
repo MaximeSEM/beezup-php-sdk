@@ -9,7 +9,7 @@ namespace BeezupSDK\Core\Request;
  */
 abstract class AbstractChannelRequest extends AbstractRequest
 {
-    public function __construct($channelId)
+    public function __construct(string $channelId)
     {
         if (!isset($this->uriVars['channelId'])) {
             $this->uriVars['channelId'] = 'channelId';

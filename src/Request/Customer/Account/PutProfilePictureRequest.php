@@ -14,16 +14,15 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PutProfilePictureRequest extends AbstractRequest
 {
-    protected string $method = 'PUT';
-    protected string $endpoint = '/user/customer/account/profilePictureInfo';
+    protected static array $allowedValues = [
+        'profilePictureUrl' => ["gravatar", "initials", "uploaded"]
+    ];
     public array $bodyParams = [
         'profilePictureSelected',
         'profilePictureUrl',
     ];
-
-    protected static array $allowedValues = [
-        'profilePictureUrl' => ["gravatar", "initials", "uploaded"]
-    ];
+    protected string $method = 'PUT';
+    protected string $endpoint = '/user/customer/account/profilePictureInfo';
 
     public function __construct(string $profilePictureSelected, ?string $profilePictureUrl)
     {

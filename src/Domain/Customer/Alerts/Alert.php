@@ -22,6 +22,6 @@ class Alert extends BaseObject
         'isActive' => 'active'
     ];
     protected static array $dataTypes = [
-        'properties' => [PropertyCollection::class,'create']
+        'properties' => [PropertyCollection::class, 'create']
     ];
 }

@@ -18,7 +18,7 @@ class PostAlertsRequest extends AbstractStoreRequest
 
     protected ?string $dataRoot = 'alerts';
 
-    public function __construct(string $storeId,AlertCollection $alerts)
+    public function __construct(string $storeId, AlertCollection $alerts)
     {
         parent::__construct($storeId);
         $this->setAlerts($alerts);

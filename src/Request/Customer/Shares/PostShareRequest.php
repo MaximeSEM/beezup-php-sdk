@@ -12,11 +12,11 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  * */
 class PostShareRequest extends AbstractStoreRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/stores/{storeId}/shares';
     public array $bodyParams = [
         'email',
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/stores/{storeId}/shares';
     protected ?string $dataRoot = 'email';
     protected bool $json = false;
 

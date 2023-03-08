@@ -19,15 +19,14 @@ use BeezupSDK\Domain\Customer\Account\CreditCardInfo;
  */
 class PutCreditCardInformationRequest extends AbstractRequest
 {
-    protected string $method = 'PUT';
-    protected string $endpoint = '/user/customer/account/creditCardInfo';
-
     public array $bodyParams = [
         'cardNumber',
         'expirationMonth',
         'expirationYear',
         'cardType'
     ];
+    protected string $method = 'PUT';
+    protected string $endpoint = '/user/customer/account/creditCardInfo';
 
     public function __construct(CreditCardInfo $creditCardInfo)
     {

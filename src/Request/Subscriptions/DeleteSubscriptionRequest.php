@@ -10,6 +10,7 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
 class DeleteSubscriptionRequest extends AbstractRequest
 {
     use IdTrait;
+
     protected string $method = 'DELETE';
     protected string $endpoint = '/user/marketplaces/orders/subscriptions/{id}';
     protected array $uriVars = [

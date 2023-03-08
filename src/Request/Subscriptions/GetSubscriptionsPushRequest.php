@@ -10,6 +10,7 @@ use BeezupSDK\Domain\Subscriptions\Collection\SubscriptionPushCollection;
 class GetSubscriptionsPushRequest extends AbstractRequest
 {
     use IdTrait;
+
     protected string $endpoint = '/user/marketplaces/orders/subscriptions/{id}/reporting';
     protected array $uriVars = [
         'id'

@@ -14,13 +14,12 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostContractDisableAutoRenewalRequest extends AbstractRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/contracts/current/disableAutoRenewal';
-
     public array $bodyParams = [
         'contractTerminationReasonType',
         'storeCount',
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/contracts/current/disableAutoRenewal';
 
     /**
      * @param string $contractTerminationReasonType

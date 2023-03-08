@@ -20,9 +20,6 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostContractRequest extends AbstractRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/contracts';
-
     public array $bodyParams = [
         'offerId',
         'storeCount',
@@ -30,6 +27,8 @@ class PostContractRequest extends AbstractRequest
         'couponOfferCode',
         'billingPeriodInMonth',
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/contracts';
 
     /**
      * @param string $offerId

@@ -12,10 +12,9 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostActivateAccountRequest extends AbstractRequest
 {
+    public array $bodyParams = ['activationCode'];
     protected string $method = 'POST';
     protected string $endpoint = '/user/customer/account/activate';
-
-    public array $bodyParams = ['activationCode'];
 
     public function __construct(string $activationCode)
     {

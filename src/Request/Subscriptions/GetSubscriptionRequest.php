@@ -10,6 +10,7 @@ use BeezupSDK\Domain\Subscriptions\SubscriptionDetail;
 class GetSubscriptionRequest extends AbstractRequest
 {
     use IdTrait;
+
     protected string $endpoint = '/user/marketplaces/orders/subscriptions/{id}';
     protected array $uriVars = [
         'id'

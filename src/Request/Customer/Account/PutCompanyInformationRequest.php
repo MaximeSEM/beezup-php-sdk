@@ -25,8 +25,6 @@ use BeezupSDK\Domain\Customer\Account\CompanyInfo;
  */
 class PutCompanyInformationRequest extends AbstractRequest
 {
-    protected string $method = 'PUT';
-    protected string $endpoint = '/user/customer/account/companyInfo';
     public array $bodyParams = [
         'address',
         'postalCode',
@@ -36,6 +34,8 @@ class PutCompanyInformationRequest extends AbstractRequest
         'vatNumber',
         'accountingEmails',
     ];
+    protected string $method = 'PUT';
+    protected string $endpoint = '/user/customer/account/companyInfo';
 
     public function __construct(CompanyInfo $companyInfo)
     {

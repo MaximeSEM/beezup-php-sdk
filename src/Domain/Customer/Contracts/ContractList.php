@@ -11,7 +11,7 @@ use BeezupSDK\Core\Domain\BaseObject;
 class ContractList extends BaseObject
 {
     protected static array $dataTypes = [
-        'current' => [Contract::class,'create'],
-        'next' => [Contract::class,'create']
+        'current' => [Contract::class, 'create'],
+        'next' => [Contract::class, 'create']
     ];
 }

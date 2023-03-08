@@ -14,14 +14,14 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  */
 class PostChangeUserPasswordRequest extends AbstractRequest
 {
-    protected string $method = 'POST';
-    protected string $endpoint = '/user/customer/account/changePassword';
     public array $bodyParams = [
         'oldPassword',
         'newPassword'
     ];
+    protected string $method = 'POST';
+    protected string $endpoint = '/user/customer/account/changePassword';
 
-    public function __construct(string $oldPassword,string $newPassword)
+    public function __construct(string $oldPassword, string $newPassword)
     {
         parent::__construct();
         $this->setOldPassword($oldPassword);

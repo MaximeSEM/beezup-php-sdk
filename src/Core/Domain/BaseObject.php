@@ -150,11 +150,11 @@ class BaseObject implements ArrayableInterface, IteratorAggregate
     public static function value(string $key, mixed $value): mixed
     {
         $dataTypes = static::getDataTypes();
-        if (isset(self::$allowedValues[$key]) && is_array(self::$allowedValues[$key])){
+        if (isset(self::$allowedValues[$key]) && is_array(self::$allowedValues[$key])) {
             if (!is_string($value))
-                throw new InvalidArgumentException(sprintf("%s need to be a string, %s is sent",$key,gettype($value)));
-            if (!in_array($value,self::$allowedValues[$key]))
-                throw new InvalidArgumentException(sprintf("Only \"%s\" are allowed for %s. \"%s\" is try to be set",implode('", "',self::$allowedValues[$key]),$key,$value));
+                throw new InvalidArgumentException(sprintf("%s need to be a string, %s is sent", $key, gettype($value)));
+            if (!in_array($value, self::$allowedValues[$key]))
+                throw new InvalidArgumentException(sprintf("Only \"%s\" are allowed for %s. \"%s\" is try to be set", implode('", "', self::$allowedValues[$key]), $key, $value));
         }
         if (isset($dataTypes[$key])) {
             $callable = $dataTypes[$key];

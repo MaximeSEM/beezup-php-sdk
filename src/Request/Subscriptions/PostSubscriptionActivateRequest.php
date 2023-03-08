@@ -18,6 +18,7 @@ use DateTime;
 class PostSubscriptionActivateRequest extends AbstractRequest
 {
     use IdTrait;
+
     protected static array $dataTypes = [
         'recoverBeginPeriod' => DateTime::class,
         'recoverEndPeriod' => DateTime::class,

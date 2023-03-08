@@ -10,6 +10,7 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
 class PostSubscriptionDeactivateRequest extends AbstractRequest
 {
     use IdTrait;
+
     protected string $method = 'POST';
     protected string $endpoint = '/user/marketplaces/orders/subscriptions/{id}/deactivate';
     protected array $uriVars = [

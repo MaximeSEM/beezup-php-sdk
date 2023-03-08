@@ -18,6 +18,6 @@ trait IdTrait
         // if the id is not set, generate an automatic id
         if (empty($id))
             $id = Functions::getRandomId();
-        return $this->setData('id',$id);
+        return $this->setData('id', $id);
     }
 }
