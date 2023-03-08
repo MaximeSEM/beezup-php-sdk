@@ -27,6 +27,7 @@ use BeezupSDK\Domain\Customer\Shares\Collection\ShareCollection;
 use BeezupSDK\Domain\Customer\Stores\Collection\StoreCollection;
 use BeezupSDK\Domain\Customer\Stores\Store;
 use BeezupSDK\Domain\Marketplaces\Collection\ChannelMarketplaceCatalogCollection;
+use BeezupSDK\Domain\Orders\Batches\OrderBatchAnswer;
 use BeezupSDK\Domain\Orders\Collection\OrderCollection;
 use BeezupSDK\Domain\Orders\Collection\OrderLightCollection;
 use BeezupSDK\Domain\Orders\Order;
@@ -87,6 +88,8 @@ use BeezupSDK\Request\Customer\Stores\GetStoresRequest;
 use BeezupSDK\Request\Customer\Stores\PatchStoreRequest;
 use BeezupSDK\Request\Customer\Stores\PostStoreRequest;
 use BeezupSDK\Request\Marketplaces\GetChannelMarketplaceCatalogsRequest;
+use BeezupSDK\Request\Orders\Batches\DeleteBatchOrderMerchantInformationRequest;
+use BeezupSDK\Request\Orders\Batches\PostBatchOrderMerchantInformationRequest;
 use BeezupSDK\Request\Orders\GetOrderHistoryRequest;
 use BeezupSDK\Request\Orders\GetOrderRequest;
 use BeezupSDK\Request\Orders\GetOrdersFullRequestRequest;
@@ -186,6 +189,8 @@ use GuzzleHttp\Psr7\Response;
  * @method EmptyAnswer|Response postCatalogAutoImportConfigureSchedules(PostCatalogAutoImportConfigureSchedulesRequest $request)
  * @method EmptyAnswer|Response postOrderChange(PostOrderChangeRequest $request)
  * @method EmptyAnswer|Response postOrderHarvest(PostOrderHarvestRequest $request)
+ * @method OrderBatchAnswer|Response deleteBatchOrderMerchantInformation(DeleteBatchOrderMerchantInformationRequest $request)
+ * @method OrderBatchAnswer|Response postBatchOrderMerchantInformation(PostBatchOrderMerchantInformationRequest $request)
  **/
 class Client extends AbstractApiClient
 {

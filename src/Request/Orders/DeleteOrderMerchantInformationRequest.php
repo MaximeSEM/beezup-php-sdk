@@ -9,8 +9,6 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
 /**
  * @method boolean getTestMode()
  * @method $this setTestMode(boolean $testMode)
- * @method string getOrder_MerchantOrderId()
- * @method $this setOrder_MerchantOrderId(string $merchantOrderId)
  */
 class DeleteOrderMerchantInformationRequest extends AbstractOrderRequest
 {
