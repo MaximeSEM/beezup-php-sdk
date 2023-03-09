@@ -12,7 +12,7 @@ use BeezupSDK\Domain\Common\EmptyAnswer;
  * */
 class DeleteShareRequest extends AbstractStoreRequest
 {
-    public array $uriVars = [
+    protected array $uriVars = [
         'userId'
     ];
     protected string $method = 'POST';

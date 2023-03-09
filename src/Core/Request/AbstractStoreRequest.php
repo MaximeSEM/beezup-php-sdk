@@ -2,7 +2,6 @@
 
 namespace BeezupSDK\Core\Request;
 
-
 /**
  *
  * @method  string  getStoreId()

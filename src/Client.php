@@ -6,6 +6,8 @@ use BeezupSDK\Core\Client\AbstractApiClient;
 use BeezupSDK\Domain\Catalogs\AutoImport;
 use BeezupSDK\Domain\Catalogs\Collection\CatalogColumnCollection;
 use BeezupSDK\Domain\Catalogs\Collection\CustomColumnCollection;
+use BeezupSDK\Domain\Catalogs\Collection\ImportationCollection;
+use BeezupSDK\Domain\Catalogs\ImportationReport;
 use BeezupSDK\Domain\ChannelCatalogs\ChannelCatalog;
 use BeezupSDK\Domain\ChannelCatalogs\Collection\ChannelCatalogCollection;
 use BeezupSDK\Domain\ChannelCatalogs\Product;
@@ -41,6 +43,8 @@ use BeezupSDK\Request\Catalogs\DeleteCatalogAutoImport;
 use BeezupSDK\Request\Catalogs\GetCatalogAutoImport;
 use BeezupSDK\Request\Catalogs\GetCatalogColumnsRequest;
 use BeezupSDK\Request\Catalogs\GetCustomColumnsRequest;
+use BeezupSDK\Request\Catalogs\GetImportationReportRequest;
+use BeezupSDK\Request\Catalogs\GetImportationsRequest;
 use BeezupSDK\Request\Catalogs\GetProductBySkuRequest;
 use BeezupSDK\Request\Catalogs\PostCatalogAutoImportActivateRequest;
 use BeezupSDK\Request\Catalogs\PostCatalogAutoImportConfigureIntervalRequest;
@@ -191,6 +195,8 @@ use GuzzleHttp\Psr7\Response;
  * @method EmptyAnswer|Response postOrderHarvest(PostOrderHarvestRequest $request)
  * @method OrderBatchAnswer|Response deleteBatchOrderMerchantInformation(DeleteBatchOrderMerchantInformationRequest $request)
  * @method OrderBatchAnswer|Response postBatchOrderMerchantInformation(PostBatchOrderMerchantInformationRequest $request)
+ * @method ImportationCollection|Response getImportations(GetImportationsRequest $request)
+ * @method ImportationReport|Response getImportationReport(GetImportationReportRequest $request)
  **/
 class Client extends AbstractApiClient
 {

@@ -28,7 +28,7 @@ class PostOrderChangeRequest extends AbstractOrderRequest
         'userName',
         'testMode'
     ];
-    public array $uriVars = ['changeOrderType'];
+    protected array $uriVars = ['changeOrderType'];
 
     protected string $method = 'POST';
     protected string $version = 'orders/v3';
