@@ -13,9 +13,9 @@ use BeezupSDK\Core\Domain\BaseObject;
 class ImportationReportMetrics extends BaseObject
 {
     protected static array $dataTypes = [
-        'detectedCount' =>'intval',
-        'duplicatedCount' =>'intval',
-        'failedCount' =>'intval',
-        'activeCount' =>'intval',
+        'detectedCount' => 'intval',
+        'duplicatedCount' => 'intval',
+        'failedCount' => 'intval',
+        'activeCount' => 'intval',
     ];
 }

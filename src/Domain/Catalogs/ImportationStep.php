@@ -12,10 +12,10 @@ use BeezupSDK\Core\Domain\BaseObject;
  */
 class ImportationStep extends BaseObject
 {
-    protected static array $mapping=[
-        'isCatalogImportPrepareReadCompleted'=>'catalogImportPrepareReadCompleted',
-        'isCatalogImportComputeDiffCompleted'=>'catalogImportComputeDiffCompleted',
-        'isCatalogUpdateCompleted'=>'catalogUpdateCompleted',
-        'isSavedInDb'=>'savedInDb',
+    protected static array $mapping = [
+        'isCatalogImportPrepareReadCompleted' => 'catalogImportPrepareReadCompleted',
+        'isCatalogImportComputeDiffCompleted' => 'catalogImportComputeDiffCompleted',
+        'isCatalogUpdateCompleted' => 'catalogUpdateCompleted',
+        'isSavedInDb' => 'savedInDb',
     ];
 }

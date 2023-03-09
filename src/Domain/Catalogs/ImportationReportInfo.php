@@ -11,7 +11,6 @@ use DateTime;
  * @method  DateTime  getEndUtcDate()
  * @method  string  getUserId()
  * @method  array  getInputConfiguration()
-
  */
 class ImportationReportInfo extends BaseObject
 {

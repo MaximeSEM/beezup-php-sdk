@@ -13,9 +13,9 @@ use BeezupSDK\Core\Domain\BaseObject;
 class ImportationReportCount extends BaseObject
 {
     protected static array $dataTypes = [
-        'createdCount' =>'intval',
-        'updatedCount' =>'intval',
-        'deletedCount' =>'intval',
-        'unchangedCount' =>'intval',
+        'createdCount' => 'intval',
+        'updatedCount' => 'intval',
+        'deletedCount' => 'intval',
+        'unchangedCount' => 'intval',
     ];
 }

@@ -12,7 +12,7 @@ class GetImportationsRequest extends AbstractStoreRequest
 
     public function getResponseDecorator(): BaseCollection|ImportationCollection
     {
-        return ImportationCollection::decorator('importations','executionId');
+        return ImportationCollection::decorator('importations', 'executionId');
     }
 }
 
