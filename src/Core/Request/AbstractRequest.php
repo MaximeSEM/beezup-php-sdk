@@ -137,9 +137,7 @@ abstract class AbstractRequest extends BaseObject implements RequestInterface
         // Handle special boolean or ALL parameters
         foreach ($this->boolOrAllParams as $param) {
             $value = $this->getData($param);
-            $params[$param] = (null !== $value) ?
-                ($value ? 'true' : 'false') :
-                'all';
+            $params[$param] = (null !== $value) ? ($value ? 'true' : 'false') : '';
         }
         /**
          * Format boolean values as strings

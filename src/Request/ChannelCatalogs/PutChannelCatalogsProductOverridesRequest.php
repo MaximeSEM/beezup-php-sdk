@@ -19,14 +19,13 @@ class PutChannelCatalogsProductOverridesRequest extends AbstractRequest
 
     protected string $endpoint = '/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides';
 
+    protected array $uriVars = [
+        'channelCatalogId',
+        'productId'
+    ];
+
     public function __construct(string $productId, string $channelCatalogId, array $overrides)
     {
-        if (!isset($this->uriVars['productId'])) {
-            $this->uriVars['productId'] = 'productId';
-        }
-        if (!isset($this->uriVars['channelCatalogId'])) {
-            $this->uriVars['channelCatalogId'] = 'channelCatalogId';
-        }
         parent::__construct();
         $this->setChannelCatalogId($channelCatalogId);
         $this->setProductId($productId);

@@ -11,6 +11,7 @@ use BeezupSDK\Domain\Catalogs\ImportationReport;
 use BeezupSDK\Domain\ChannelCatalogs\ChannelCatalog;
 use BeezupSDK\Domain\ChannelCatalogs\Collection\ChannelCatalogCollection;
 use BeezupSDK\Domain\ChannelCatalogs\Product;
+use BeezupSDK\Domain\ChannelCatalogs\ProductCounters;
 use BeezupSDK\Domain\Channels\Collection\ChannelCollection;
 use BeezupSDK\Domain\Channels\Collection\ColumnCollection;
 use BeezupSDK\Domain\Common\EmptyAnswer;
@@ -29,6 +30,7 @@ use BeezupSDK\Domain\Customer\Shares\Collection\ShareCollection;
 use BeezupSDK\Domain\Customer\Stores\Collection\StoreCollection;
 use BeezupSDK\Domain\Customer\Stores\Store;
 use BeezupSDK\Domain\Marketplaces\Collection\ChannelMarketplaceCatalogCollection;
+use BeezupSDK\Domain\Marketplaces\Collection\PublicationCollection;
 use BeezupSDK\Domain\Orders\Batches\OrderBatchAnswer;
 use BeezupSDK\Domain\Orders\Collection\OrderCollection;
 use BeezupSDK\Domain\Orders\Collection\OrderLightCollection;
@@ -53,6 +55,7 @@ use BeezupSDK\Request\Catalogs\PostCatalogAutoImportPauseRequest;
 use BeezupSDK\Request\Catalogs\PostCatalogAutoImportResumeRequest;
 use BeezupSDK\Request\Catalogs\PostCatalogAutoImportStartRequest;
 use BeezupSDK\Request\ChannelCatalogs\DeleteChannelCatalogsProductOverrideRequest;
+use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogProductCountersRequest;
 use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogProductRequest;
 use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogRequest;
 use BeezupSDK\Request\ChannelCatalogs\GetChannelCatalogsRequest;
@@ -92,11 +95,12 @@ use BeezupSDK\Request\Customer\Stores\GetStoresRequest;
 use BeezupSDK\Request\Customer\Stores\PatchStoreRequest;
 use BeezupSDK\Request\Customer\Stores\PostStoreRequest;
 use BeezupSDK\Request\Marketplaces\GetChannelMarketplaceCatalogsRequest;
+use BeezupSDK\Request\Marketplaces\GetMarketplacePublicationsRequest;
 use BeezupSDK\Request\Orders\Batches\DeleteBatchOrderMerchantInformationRequest;
 use BeezupSDK\Request\Orders\Batches\PostBatchOrderMerchantInformationRequest;
 use BeezupSDK\Request\Orders\GetOrderHistoryRequest;
 use BeezupSDK\Request\Orders\GetOrderRequest;
-use BeezupSDK\Request\Orders\GetOrdersFullRequestRequest;
+use BeezupSDK\Request\Orders\GetOrdersFullRequest;
 use BeezupSDK\Request\Orders\GetOrdersLightRequest;
 use BeezupSDK\Request\Orders\PostOrderChangeRequest;
 use BeezupSDK\Request\Orders\PostOrderHarvestRequest;
@@ -134,7 +138,7 @@ use GuzzleHttp\Psr7\Response;
  * @method EmptyAnswer|Response putChannelCatalogsProductOverrides(PutChannelCatalogsProductOverridesRequest $request)
  * @method EmptyAnswer|Response deleteChannelCatalogsProductOverride(DeleteChannelCatalogsProductOverrideRequest $request)
  * @method OrderLightCollection|Response getOrdersLight(GetOrdersLightRequest $request)
- * @method OrderCollection|Response getOrdersFull(GetOrdersFullRequestRequest $request)
+ * @method OrderCollection|Response getOrdersFull(GetOrdersFullRequest $request)
  * @method Order|Response getOrder(GetOrderRequest $request)
  * @method OrderHistory|Response getOrderHistory(GetOrderHistoryRequest $request)
  * @method EmptyAnswer|Response postOrderMerchantInformation(PostOrderMerchantInformationRequest $request)
@@ -197,6 +201,8 @@ use GuzzleHttp\Psr7\Response;
  * @method OrderBatchAnswer|Response postBatchOrderMerchantInformation(PostBatchOrderMerchantInformationRequest $request)
  * @method ImportationCollection|Response getImportations(GetImportationsRequest $request)
  * @method ImportationReport|Response getImportationReport(GetImportationReportRequest $request)
+ * @method ProductCounters|Response getChannelCatalogProductCounters(GetChannelCatalogProductCountersRequest $request)
+ * @method PublicationCollection|Response getMarketplacePublications(GetMarketplacePublicationsRequest $request)
  **/
 class Client extends AbstractApiClient
 {

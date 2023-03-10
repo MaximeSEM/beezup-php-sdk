@@ -4,16 +4,15 @@ namespace BeezupSDK\Request\ChannelCatalogs;
 
 use BeezupSDK\Core\Request\AbstractRequest;
 use BeezupSDK\Core\Response\Decorator\BaseObject;
-use BeezupSDK\Domain\ChannelCatalogs\ChannelCatalog;
+use BeezupSDK\Domain\ChannelCatalogs\ProductCounters;
 
 /**
- *
  * @method  string  getChannelCatalogId()
  * @method  $this setChannelCatalogId(string $channelCatalogId)
  */
-class GetChannelCatalogRequest extends AbstractRequest
+class GetChannelCatalogProductCountersRequest extends AbstractRequest
 {
-    protected string $endpoint = '/user/channelcatalogs/{channelCatalogId}';
+    protected string $endpoint = '/user/channelCatalogs/{channelCatalogId}/products/counters';
 
     protected array $uriVars = [
         'channelCatalogId'
@@ -25,8 +24,8 @@ class GetChannelCatalogRequest extends AbstractRequest
         $this->setChannelCatalogId($channelCatalogId);
     }
 
-    public function getResponseDecorator(): BaseObject|ChannelCatalog
+    public function getResponseDecorator(): BaseObject|ProductCounters
     {
-        return ChannelCatalog::decorator();
+        return ProductCounters::decorator();
     }
 }

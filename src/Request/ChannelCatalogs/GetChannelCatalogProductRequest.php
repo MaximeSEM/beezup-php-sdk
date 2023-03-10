@@ -15,16 +15,14 @@ use BeezupSDK\Domain\ChannelCatalogs\Product;
 class GetChannelCatalogProductRequest extends AbstractRequest
 {
     protected string $endpoint = '/user/channelCatalogs/{channelCatalogId}/products/{productId}';
+    protected array $uriVars = [
+        'productId',
+        'channelCatalogId',
+        'channelColumnId',
+    ];
 
     public function __construct(string $channelCatalogId, string $productId)
     {
-        if (!isset($this->uriVars['channelCatalogId'])) {
-            $this->uriVars['channelCatalogId'] = 'channelCatalogId';
-        }
-        if (!isset($this->uriVars['productId'])) {
-            $this->uriVars['productId'] = 'productId';
-        }
-
         parent::__construct();
         $this->setChannelCatalogId($channelCatalogId);
         $this->setProductId($productId);

@@ -20,17 +20,14 @@ class DeleteChannelCatalogsProductOverrideRequest extends AbstractRequest
 
     protected string $endpoint = '/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}';
 
+    protected array $uriVars = [
+        'productId',
+        'channelCatalogId',
+        'channelColumnId',
+    ];
+
     public function __construct(string $productId, string $channelCatalogId, string $channelColumnId)
     {
-        if (!isset($this->uriVars['productId'])) {
-            $this->uriVars['productId'] = 'productId';
-        }
-        if (!isset($this->uriVars['channelCatalogId'])) {
-            $this->uriVars['channelCatalogId'] = 'channelCatalogId';
-        }
-        if (!isset($this->uriVars['channelColumnId'])) {
-            $this->uriVars['channelColumnId'] = 'channelColumnId';
-        }
         parent::__construct();
         $this->setChannelCatalogId($channelCatalogId);
         $this->setProductId($productId);
